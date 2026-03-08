@@ -1,0 +1,11 @@
+Multiple Stores
+
+
+Multiple Initial states
+
+Mutiple reducers based on the initial state
+
+multiple context memory
+    userCrentials
+    product details
+    session info

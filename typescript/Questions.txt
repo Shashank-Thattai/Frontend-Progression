@@ -1,0 +1,74 @@
+What is a web server? It only throws the compiled dist filed?
+
+
+ Can multiple compoennts be under each provider?
+ MULTIPLE <CustomerPage></CustomerPage> different components
+//Example for multiple context variables 
+
+/*
+var UserAccountDetails = createContext()
+
+var UserSessionDetails = createContext()
+
+var UserPersonalDetails = createContext()
+
+<>
+<UserSessionDetails.provider value ={{a,b}}>
+    <UserAccountDetails.provider value ={{a,b}}>
+        <CustomerPage></CustomerPage>
+    </UserAccountDetails.provider>
+</UserSessionDetails.provider>
+ </>
+*/
+
+
+
+//find,filter,sort,map,reduce
+
+
+
+Spread operator
+
+var userResistrationDetails ={
+    userName: '',
+    userAge: 0,
+    userEmail:'',
+    userLocation:'',
+    usetSal:0,
+    userPf:0,
+    companyname: 'MicroSoft',
+    location: 'New York',
+    productdetails:[],
+    userAccountDetails:[]
+
+};
+
++
+
+userName: 'Krish'
+
+=
+
+var userResistrationDetails ={
+    userName: 'Krish',
+    userAge: 0,
+    userEmail:'',
+    userLocation:'',
+    usetSal:0,
+    userPf:0,
+    companyname: 'MicroSoft',
+    location: 'New York',
+    productdetails:[],
+    userAccountDetails:[]
+
+};
+
+
+so {...state, [action.type]:action.value}
+
+
+
+
+Stateful vs stateless funcitons
+
+

@@ -1,0 +1,11 @@
+.productDetailsdCOntainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+        .card{
+            width: 350px;
+            margin-bottom: 20px;
+            
+
+        }
+}

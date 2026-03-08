@@ -1,0 +1,63 @@
+
+.col-md-6{
+    font-size: 20px;
+    color: red;
+
+    svg{
+        stroke: red;
+        fill: red;
+        width: 150px;
+        height:120px
+    }
+}
+
+.pageheader{
+    padding: 20px;
+    .btn-group,.dropdown-menu{
+        
+            color:red ;
+        background-color: black;
+        border: 1px solid ;
+        border-radius: 10px;
+        margin-right: 10px;
+
+        
+        
+    }
+}
+
+
+.buttoncontainer{
+    text-align: right;
+}
+.netflix-dropdown .dropdown-menu {
+    background-color: black;
+    border: 1px solid #444;
+  }
+  
+  .netflix-dropdown .dropdown-item {
+    color: white;
+    font-size: 14px;
+  }
+  
+  .netflix-dropdown .dropdown-item:hover {
+    background-color: #e50914; /* Netflix red */
+    color: white;
+  }
+
+  .pageheader {
+    padding: 20px 40px;
+  }
+  
+  .header-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .netflix-logo {
+    height: 32px;
+    fill: #e50914;
+  }
+  

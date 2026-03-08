@@ -1,0 +1,145 @@
+/*.trending-now{
+    h1{
+        color: #fff;
+        font-weight: bold;
+        font-size: 15px;
+
+    }
+}
+.sliderTrack{
+    display: flex;
+    
+}
+.trendingSlider{
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+    width: 80%;
+    border: 2% soild red;
+}
+
+
+.one{
+    background-image: url(../../assets/imgi_37_AAAABdN_bIOlvcPmuNg-8zb6yTEGzWwTEl5TQHxSGXeZYUZXD42PmzgOxe4XxfNs_FNWoKHZPwui2ZNbFkP6lW-cWNj7co2EHiAmQpBfdP3ty0noShRvad3MK4TOglaMWfLT3uCz.webp);
+    margin:10px;
+    width:250px;
+    height: 140px;
+    background-size:100% 100% ;
+    border-radius: 10px;
+
+}
+.two{
+    background-image: url(../../assets/imgi_40_AAAABXsQW685gLWd3Ysm8_v8w3iWXiD3rv0Rwin7WZTAf63DQ_BRkZyba-ZP9nABuUkDz0QpuW9FAeih1aL40KU2-G2tXasowdqKm5oyYW0SYx0yfDPxeMBWy2sbrvbdLHUjLJDB.webp);
+    margin:10px;
+    width:250px;
+    height: 140px;
+    background-size:100% 100% ;
+    border-radius: 10px;
+
+}
+.three{
+    background-image: url(../../assets/imgi_42_AAAABc5jC1Atre6lcqsaU8r8MZX1LPuW54mSWUAGZgVF_k8rPN12IyFvBsuUEd5VU-Egs1DR2Qhjg0ow5cr4W-fd5z5w43hN3_AjLr7VljUo5N22b3hDgp1LCJh0StiNOgEtkozR.webp);
+    margin:10px;
+    width:250px;
+    height: 140px;
+    background-size:100% 100% ;
+    border-radius: 10px;
+
+}
+.four{
+    background-image: url(../../assets/imgi_5_US-en-20260126-TRIFECTA-perspective_1a47c79b-841b-4c5c-bec1-4752a5bd3577_medium.jpg);
+    margin:10px;
+    width:250px;
+    height: 140px;
+    background-size:100% 100% ;
+    border-radius: 10px;
+
+}
+.five{
+    background-image: url(../../assets/imgi_6_US-en-20260126-TRIFECTA-perspective_1a47c79b-841b-4c5c-bec1-4752a5bd3577_small.jpg);
+    margin:10px;
+    width:250px;
+    height: 140px;
+    background-size:100% 100% ;
+    border-radius: 10px;
+}
+.previousbtn{
+    color: #fff;
+}
+.nextbtn{
+    color: #fff;
+}
+.trending-now{
+    font-size: 32px;
+    color: rgba(255, 0, 0, 0.8);
+   
+    
+}*/
+
+.trending-now {
+    font-size: 32px;
+    color: rgba(255, 0, 0, 0.8);
+    margin-left: 40px;
+  }
+  
+  /* Slider wrapper */
+  .trendingSlider {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  /* Viewport */
+  .sliderContainer {
+    overflow: hidden;
+    width: 80%;
+  }
+  
+  /* Track (THIS makes items horizontal) */
+  .sliderTrack {
+    display: flex;
+    gap: 16px;
+    transition: transform 0.4s ease;
+    transition: translate 0.5s;
+  }
+  
+  /* Shared card size */
+  .slider-item {
+    width: 250px;
+    height: 200px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+    transition: transform 1s; /* VERY IMPORTANT */
+  }
+  
+  /* Individual backgrounds */
+  .one {
+    background-image: url(../../assets/imgi_37_AAAABdN_bIOlvcPmuNg-8zb6yTEGzWwTEl5TQHxSGXeZYUZXD42PmzgOxe4XxfNs_FNWoKHZPwui2ZNbFkP6lW-cWNj7co2EHiAmQpBfdP3ty0noShRvad3MK4TOglaMWfLT3uCz.webp);
+  }
+  .two {
+    background-image: url(../../assets/imgi_40_AAAABXsQW685gLWd3Ysm8_v8w3iWXiD3rv0Rwin7WZTAf63DQ_BRkZyba-ZP9nABuUkDz0QpuW9FAeih1aL40KU2-G2tXasowdqKm5oyYW0SYx0yfDPxeMBWy2sbrvbdLHUjLJDB.webp);
+  }
+  .three {
+    background-image: url(../../assets/imgi_42_AAAABc5jC1Atre6lcqsaU8r8MZX1LPuW54mSWUAGZgVF_k8rPN12IyFvBsuUEd5VU-Egs1DR2Qhjg0ow5cr4W-fd5z5w43hN3_AjLr7VljUo5N22b3hDgp1LCJh0StiNOgEtkozR.webp);
+  }
+  .four {
+    background-image: url(../../assets/imgi_5_US-en-20260126-TRIFECTA-perspective_1a47c79b-841b-4c5c-bec1-4752a5bd3577_medium.jpg);
+  }
+  .five {
+    background-image: url(../../assets/imgi_6_US-en-20260126-TRIFECTA-perspective_1a47c79b-841b-4c5c-bec1-4752a5bd3577_small.jpg);
+  }
+  
+  .previousbtn,
+  .nextbtn {
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .slider-item:hover{
+    transform: scale(2,2);
+  }

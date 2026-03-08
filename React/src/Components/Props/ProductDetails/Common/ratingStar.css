@@ -1,0 +1,22 @@
+.disabledstar,.fullstar,.halfstar{
+    background-image:url("../../../../Assets/Screenshot 2026-02-17 at 3.53.12 PM.png");
+    width:20px;
+    height:20px;
+    background-size: cover
+}
+
+.fullstar{
+
+}
+.halfstar{
+    background-position: -38px 0px ;
+
+}
+.disbledstar{
+    background-position: -38px 0px;
+
+}
+.star-rating-container{
+    display: flex;
+    flex-direction: row;
+}

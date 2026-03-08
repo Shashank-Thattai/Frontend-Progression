@@ -1,0 +1,1181 @@
+What are the cCore Concepts which is making React so popular
+
+React
+    React JS-JS Library to build rich ui features/webapplications
+    
+    React Native-To build mobile apps
+
+    Compiteters -?Angular,NextJs, cane js, backbone js, vue js
+
+    1. Component based development
+
+    2. JSX(where html content can be injected within js code itself) based syntax:Easy to retrive js code to html view
+
+    ex: function example(){
+        return(
+            <>
+            html code with data binding
+            </>
+        )
+    }
+
+    3.Virtual DOM
+
+    DOM-> Document Object Model
+        html
+            head
+                title
+                script
+                style
+            body
+                div id ="app"
+                    script src="index.js"
+                span
+                    a href ="#"
+                        text "click me"
+                div 
+                    username    
+Virtual DOM-> Creats a copy and then makes chages to the "virtual" DOM at the end the finalized copy is replaced with the original
+        html
+            head
+                title
+                script
+                style
+            body
+                div id ="app"
+                    script src="index.js"
+                span
+                    a href ="#"
+                        text "click me"
+                div 
+                    username   
+                div 
+                    user country
+
+
+    4. Data binding
+    ->React only supports One Way Data Binding where when a variable is created in js its showing in the html, In two way data binding the data that is being inputed changes the value of a variable which is shown on the DOM but it can be achieved through the sue of useState handleChange and other ways as well
+    ->  DATA BINDING is The concept of getting/retrieveing js variables directly to the dome without using any dom operations
+
+    5.Server side rendering Components
+        ->The concept of rendering the component while server is throwing data to the client
+
+    6.Fragmenting
+        -> All the HTML content being rendered by a component should be fragmented(binding under one single parent)Every element should have a closing tag
+    7.Support to Routing 
+        -> Rendering your components based on your routing URL
+
+    8.Performance
+
+    9.Conditional rendering
+
+    10.Simplicity...
+
+    11.Supports both JS and TS based development
+
+
+    =================================================================================
+
+    Component
+        js code 
+        html file
+        css file
+
+
+
+=================================================================
+
+Webpage
+    browser ->HTML,CSS,JS
+
+==================================================================================
+
+document.querySelector('#ab')
+
+event.target-> Event is a predefined object which automatically gets generated when any action on webpage is done
+
+
+===============================================================================
+
+Using Looping Control structos and conditions within HTML Fragments
+
+
+map
+->
+var data =[...]
+
+data.map((value)=>{
+
+})
+
+var obj ={...}
+
+var keys = object.keys(); ->['key1','key2']
+
+
+
+
+
+object can be converted into string with JSON.Stringify(object)
+
+what datatype cannt be bindde directly into the ui
+-Boolen and string can be done with JSON strinfiy/toString()
+
+how are you going to implemnt iteration in yout fragmented
+with .map() method cant do for because {} makes it likean expression 
+
+================================================================================
+
+Conditional operator 
+double and percent operator &&
+
+
+===================================================================================
+
+Creating brand new react project from scratch
+
+Choose a Bundler
+
+1.Under command prompt get inside the folder where we would like to create project
+2. Run -> npm create vite@latest ProjectName
+->The above command creates a boilerplate code with below structure
+
+ProjectName
+
+    node_modules -> will hold the list of all the node modules installed(dependencies)
+    public -> Holds the static resources(html,css,images...)
+    src ->Holds the source code of the react application 
+    .gitignore -> when cloning or posting to git only posts nessary files
+    dist-> Folder holds list of final compiled version of code
+    package.json -> The main file which gets invokes anytime we run and npm commands(npm run dev, npm run build); Holds list of all the dev and code dependencie modules;Holds the application name,version,author name, contact details etc...
+    ReadME-> What the project is for(Understand the project, what do we start with what do we end with Documentation/installation)
+    package.lock.json-> List of all the etries for all the node modules installed for the current project
+    eslint.config.js-> The step of steps/files that needs to be executed for the compiler(used to mention the ecma config to be used while compiling)
+    vite.config.js-> Plugins to be used while bundling
+                     Default browser to be used while using app
+                     Can configure the port no where the app has to launch
+
+
+
+Flow of running files
+    npm run dev 
+        package.json
+            vite.config.js
+                localhost:5173
+                index.html
+                    main.jsx
+                        app.jsx
+
+
+
+
+
+
+
+    Minificaiton
+    1.Remove extra spaces
+    2. Write everything in a single likean
+    3. Replace larger variable names with smaller   
+    4. Optimize the logic/no. of lines of code5.Remove deocumentation comments
+
+    Environments
+
+        webapplications(...js/jsx/cs/html)
+            Atrifacts ->Folder with all the complied code
+            DEV- webapplication_artifact.0.1 webapplication_artifact.0.3 webapplication_artifact.0.7
+            SIT
+            UAT 
+            PROD -  webapplication_artifact.0.1
+            BCP 
+
+
+===================================================================================
+        
+
+
+Applying css
+<div></div> inline CSS
+class
+
+<div className ="abc"></div>
+<div style ="width:400px";"height:200px">
+
+<div style ={{"width":'200px',"height":'20px'}}></div>
+
+
+
+Image downloader chrome extension
+
+
+==================================================================
+
+vite    
+    javascript
+    javascript +reactt compilr
+    TSts+react compilr
+
+    vite is a bundler 
+        js code
+        react code with jsx
+        TS
+        Ts+tsx
+        etc.
+
+
+
+===============================================================================
+
+Lifecycle of a functional component
+
+    1.Mounting of component->The time where the ui component getting rendered on the page
+    2.updating
+    3.unmounting - when the component gets removed from the DOM structure
+
+    Memory management within a component
+        Each component has 2 types of Memory
+            Normal->Values are defined but cannot be updated on the UI
+            State-> With a trigger Updates the UI
+
+    UseState Hook
+
+    Hook-> Predefined methods which have been defined in react from 16.8
+    Used to define predefined functionality of a component, these hooks will help to define state variables and lifecycle of a component can be accessible
+
+    All hooks will start with predefined 'use' keyword
+
+    eg:
+        useState()-> Used to store any vaiable within the component state memory
+        useEffect()
+        useRef()
+        useContext()
+        .....
+        .
+        .
+        .
+        .
+        .
+
+    useState Syntax:
+        const [variableName,methodtosetvalue] = useState(default value)
+
+        eg:
+
+        const[userName,setUserName] = useState('raj)
+
+        State variables cannot be changed directly, they have to be changed only through the  state set methods
+        userName = 'teena'; // error
+
+        setUserName("teena")->correct way
+
+        For useState we use const so we know we cant change the value
+        without using the setState() method
+
+
+===================================================================================
+        Limiation of hooks
+            1.Hooks should only be defined at the staring point of component definition(Top level)
+            2.Hooks cannot be defined or used within the conditional or looping or within inner functions
+
+            var userDetails ={
+                name: 'teena'
+                age: 20,
+                gender: 'female',
+                location: 'Hyderabad',
+                displayData(){
+
+                }
+
+            }
+
+            var age = userDetails.age;
+            var location = userDetails.location;
+
+            var[age,location,displayData] = userDetails
+
+            const[userName,setUserName] = useState("Teena)
+            Internally this is whats going on below_>
+            const [userName,setUserName] = {
+                userName: '',
+                setUserName(){
+                    ...
+                }
+            }
+
+            For multiple states you can make multiple useStates for each state or
+            -> const[userData,setUserData] = useState({name: '',
+                                                        age: '',
+                                                        gender: ''})
+
+
+
+            Event handling
+
+
+                Syntax:
+
+                    <Component onClick ={displayInfo}></Component>
+
+               -> The concept of handling any actions being performed on the page is called a Event handling
+                ->In react Event Handling will be managed through react Synthetic event system ensuring cross browser consistency and efficient updates
+                ->Developers attach event Handling directly in jSX using camelCase props
+
+                eg: onClick,onFocus,onChange,onBlur,onKeyUp,onKeyDown etc...
+                 
+                 And React wraps native events in a syntheticEvent object for normalized behavior
+
+                 Core principals of Event handling:
+                    Synthetic Events:React creates a SyntheticEvent wrapper around native browser events for consistency accross browsers
+
+                    Binding Context -Functions can be defined inline or referenced; arrow functions can help avoid manual binding
+                    Event Propagation:Events bubble up through the component tree, but you can stop event propigation with event.preventDefault()
+
+                    event.preventDefault()-To override default browser behavior
+
+<UserDialog id="test" name ="abc" sample ="pqr"></UserDialog>
+
+    Properties/props of a paticular component
+
+=================================================================
+
+    Component holds two types of memory
+        Static-Variables that have been declared directly/non-state values will be stored within it
+        State - A special memory where any variable which has been defined  through usestate will be stored within it. Anytime the value changes, the component lifecycle gets invoked automatically
+
+Two way databinding
+Reading data from User through input elements 
+useEffect() hooks
+
+
+ex: stocks displayInfo  
+        company1 -2.5
+        company2 -5.6
+
+
+        Using event handling we can achive two way data binding in react
+
+<input id =abc>
+    event   
+        event.targer =>document.querySelector("#abc)
+    
+    <button id =pqr>
+        event.target
+ =================================================================
+
+
+    useEffect()
+    API calls/ fetch/ axios
+    Forms in reacts
+
+        useEffect()-> Very important hook which is supported in react, this hook gets invoked immedietly after the component(ui) gets  binded on to the page
+            Majorly the code related to dom update,api calls etc. has to be placed within useEffect() hook
+
+        1. It can even return a method, which gets invoked automatically when the component gets unmounted
+        2. We can even pass an array of dependencies, any time any denpendency value,  gets updated gets updated, automatically useEffect will be recalled again
+
+        Syntax:
+
+            useEffect(()=>{
+                //code which is related to API calls,dom operations 
+            },[]);
+
+            useEffect(()=>{
+                //code which is related to API calls,dom operations 
+            },[dependencie1,dependencie2,etc.]);
+
+
+1ST ASSIGNMENT
+
+    Generate a payslip
+        form. 
+            name
+            age
+            department
+            basic salaray
+            gender
+
+        payslip
+            name
+            age
+            gender
+            department
+            basic salaray
+            pff value
+            Hra. 
+            total salaray
+            tax
+            onhand sal
+
+
+NOT RECOMMENDED TO USE MULTIPLE useEffects()
+
+
+
+Web service to get customer satilites info - https://isro.vercel.app/api/customer_satellites 
+
+    Webservice/ REST API / Data endopint /api url etc.
+
+
+================================================================================
+
+Mounting is the concept of the ui being binding onto the page
+
+
+class abc{
+    constructor(){
+        this.a = 90;
+    }
+    getData(){
+        console.log("value of as " + this.a);
+        setTimeout(function(){
+            console.log("value of as" + this.a)
+        },3000)
+    }
+
+}
+
+var a1 = new abc();
+a1.getData();
+
+    expected value of is 90
+             value of a is (it will say empty) if its not an arrow function 
+
+
+=================================================================
+
+React 19 Forms
+    Formik third party library to read or evaluate form data
+    yup is the third party data validation library
+
+
+        Forms in React 19:
+            React 19 introduces a more standardized way to handle forms using new features like 'Actions', 'useActionState' and 'useFormStatus' hook.
+            These simplify form submission, loading states and error handling
+
+React 19 Forms: Form handling involves using 'useState()' to track input values writing 'onChange' handles for each field handling submission via handleSubmit() function
+
+React 19 Form Enhancements:
+    React 19 introduces Actions, which are asynchronous functions designed to simply form logic.
+    Handle form submission declaratively, track pending states with 'useFormStatus' manage form state within 'useActionState()'
+
+Actions are asyn functions that handle form logic we pass them directly to the forms  action attribute.
+
+    Key features in React 19 forms  
+        Actions -> These are asynchronous functions that handle form submissions. Instead of manually managing state and side effects, we define an action function and pass to the form.
+
+        'useActionState' => It is a new hook that has been introduced in react 19, this hook tracks the state of an action(eg. loading,success,error). It replaces manual 'useState' and 'useEffect' logic form submission
+         UseAction State Syntax:
+    Takes 2 paramameters
+        1.Form SUbmit handler function to handle logic after user clicks on button
+        2.Object to specify the initial state of form
+
+
+        'useFormStatus' -> 'its a new hook that has been introduced from react 19. This hook provides realtime status of the form(eg:pending, submitted). It is useful for disabling buttons or showinf spinners during submission.
+        Note:
+        We generally dont need to depend on 3rdparty libary like Formik from react q9, React 19 introduces native form handling features that reduces the need for external library like formik or React hook form.
+
+================================================================
+
+Forms
+Props - dynamically reading params from component props
+Custom hooks
+Sharing data between components
+
+
+Formal vs actual parameters look into this
+
+Strict Mode: Activates extra checks and warnings for the component inside it
+
+    Detects Unexpected Side effects:
+
+    Identifies Unsafe LifeCycle components
+
+    Warns against depreciating APIs
+
+======================================================================
+
+    Jan 02 2026
+        Properties(props)
+            -><tag id name style>
+
+    ex:
+    function addvalues(a,b){
+       // var a = 10;
+       // var b = 20;
+        var c = a+b;
+        console.log("The sum is:" + c)
+
+    }
+
+    parameters
+
+    addvalues(10,20);
+
+    addvalues(120,420)
+
+    Differnt Type of functions that are used:
+
+    function sample(){
+        //This object reference is not held
+    }
+    var sample = function() {
+
+    }
+    var sample =() =>{
+        return "Hello World"
+    }
+
+    Difference between the arrow and normal functiton . The arrow funcitons keeps the this binded to the function so that it doesnt forget but a normal functiton does not bind the this to the funciton.
+
+    props -> passing parameters to components to achieve dynamic rendering according to the passed prop values
+
+    props.children -> The elements which will be as children to the components, will be catched as props.children
+
+    <component name = "test" id ="abc">
+    <p>hello</p> -> props.children
+    </component name>
+
+
+    Task:
+    Create a visting card: let the user Input the userName, age, and profession and background color and when generate is clicked then the card is generated Create a JSON object, pass the object to the visting card
+
+=============================================================
+
+Debugging Techniques in React
+1. Browsers default Developer Tools
+2. React dev tools browser extension
+    Components
+        Listing out the list of components been loaded currently within the dom relationship between the components
+    Profiler
+        How much time every component is taking to render\
+
+Transfer data between components:
+    1.From parent to children -Done(Through Props)
+    2.From Grand Parent to grand children
+    3.Passing data from child to parent
+    4.Sharing data between independent components - Redux
+
+Coming back to the transfer above
+
+
+Creating Custom Hooks:
+
+predefined:
+    useState()
+    useEffect()
+    useFormState()
+    useActionState()
+
+    user defined hooks:
+    I want to make a reusable feature which can be used across multiple components
+    Custom hooks need to start with use
+        useProductDetails()
+
+        function sample(){
+
+        }
+
+        vs.
+
+        function useSample(){
+            Can make use of predefined hooks within custom hooks
+        }
+
+Creating Custom Hooks in React 19:
+    To create custom hook in react 19, define a funciton  which starts with 'use' and internally it uses build in hooks like 'useState()', 'useEffect(), useContext(), useFormState() etc. inside it
+    Custom hooks lets is to encapsulate and reuse logic across the components
+
+    A custom hook is a simple JS function 
+
+        1.Starts with 'use'
+        2.Uses one or more builtin/predefined hooks internally
+        3.Returns values or functions that components can make use
+    Custom hooks helps in reusing the logic without duplicating code across compoennts.
+
+    Syntax:
+        function use<userdefined hook name>(optional params){
+            ...
+            ...
+        }
+        function useCounter(){
+            ...
+            ...
+            const[a,setA] = useState(10);
+        }
+
+
+useRef()- Hook
+ ->  A predefined hook which has been supported in React, which returns mutable ref obj whose current Property persists for the full lifecyhcle of the component
+ -> It is primariliy used to access DOM elements or storing values that dont trigger rerender.
+
+ From React 19, 'ref' is just a prop similar to name, id, className etc.
+
+ 'ref' cleanup function
+    one of the most requested feature added in React 19 is the ability to return a cleanup function from a ref callback.This makes manual logic much easier
+
+    Syntax:
+
+        var inputElementRef = useRef(null);
+
+        <input type = "text" ref = {inputElementRef}>
+
+ref
+    1.DOM
+    2.cleanup
+    3.hold the ref of mutable obj
+
+    =========================================================================
+
+    How to share data between components:
+
+        Relative Components:
+
+            Downwards:From parent to child
+                1. Through props - Done
+                2. prop drilling -Done
+                3. useContext() & createContext()
+
+            Upwards: From child to parent
+                1. Through passing callback method from parent to child, child invokes parent callback 
+                method
+
+        Independent Components:
+
+                State Management:
+                    use Reducers
+                    Redux state management
+
+
+    useContext() -, createContext()
+
+        useContext() is a predefined hook which is supported in react, using which we could 
+        be able to access / subscribe the context memory directly within the funcitonal component.
+
+        It works with a context object created using React.createContext()
+
+        Context memory is a special memory of every component, which can be accessible only to other child components.
+
+        Note: The context memory will not be created for every component by default.
+
+        Steps to create context memory within a component
+
+           1. var ContextName = createContext(null); //Create a context memory
+
+           2. define scope of context memory
+            -> <Contextname.provider>
+                <ChildComp></ChildComp>
+               </Contextname.provider>
+
+            3. Accessing context memory data under child
+                -> let obj = useContext(contextname);
+
+            ".Provider" : In react Provider is a special component which comments
+            with every object created using React.createContext();
+                Its used to provide a value to all components inside its tree,so they can access that value
+                via :"useContext" without prop drilling
+                '.Provider' is essentially the gateway for passing data down the component tree
+
+            Note:Adding .Provider is optional from lastest React
+
+            Note:
+
+                1. By default none of the conponents hold the context memory
+                2.Context memory only gets created by using createContext()
+                3.We can create multiple context memory for a single component
+                4.Yes child components can access data from different context memory, through useContext("contextname)
+
+------------
+Different Types of memory under a component
+
+    1.Static memory
+    2.State memory
+    3.Context memory
+
+
+========================================================
+
+    1. useContext() and createContext
+    2. passing data from child to parent through callback
+
+
+=====================================================
+
+
+    useReducer() Hook
+
+        -> To do better state management within a component
+        
+        reduce method
+            Array.prototype.reduce 
+
+            -> It takes an array if values and reduces them to a single value.
+            reduce is the method which defines how the logic of reduction happens
+
+                var result = array.reduce((accumalator,currentvalue)=>>{accumalator+currentvalue},initialvalue)
+
+                This for loop is what reduce does
+                var data =[...];
+                var result = 0;
+                for(var i = 0; i<data.length;i++)
+                {
+                    result = result+data[i]
+                }
+
+    useReducer() is a predefined hook which is supported in React. It uses the same code idea as the reduce method in javascript but applies it to statemanagement isntead of arrays
+
+    useReducer is always a better alternative for a useState hook only in the case where a component has may different state values which need to be managed
+
+    using useReducer is expense and a bit complex if we use it in every scenario
+
+        1. It can define a predictable application state
+        2. It can configure a store where data is kept
+        3. Global scope is accessable to all components through state
+        4. Reducer defines actions that trace changes in data
+
+
+        Steps to make use of useReducer
+
+            1. Create a initial state as stored
+
+                eg:
+                    var initialData ={...}
+
+            2.Define a reducer ->Which handles the actions
+
+                function reducer(state,action){
+                    //Action holds the type of action been generaed 
+                    //State has to be updated based on the action
+                }
+============================================
+
+Doubt session
+
+    useState
+    useContext
+    useReducer
+
+    use()
+
+    car contextdata = useContext("contextname")
+
+    car contextdata = use('contextname')
+
+
+    State management at application level - options
+
+        Combination of useContext and useReducer
+
+        3RD party library's
+            REdux statemanagement 
+            Zustand
+            Recoil
+            etc.
+
+       In form     onSubmit
+
+       form action ="http//.." method="GET"
+
+            button type = submit
+            onSubmit
+
+            useActionState
+
+
+In a component if there are no state variables created then ts Stateless
+    Stateless Components
+        -> They dont have their own state data. Instead they depend on the props which are being passes
+
+        const[themeName,setThemeName] = useState("red")
+    <ABC>
+        <VisitingCard data ={} theme ={} className={}>
+            //Logic
+
+            function VisitingCard(props){
+
+            }
+         </VisitingCard>
+    </ABC>
+
+    Stateful Components
+        ->Components which has their own state data, and manage their own state information/data
+
+        <UserRegistrationForm> 
+
+        //logic
+        const[userName,setUserName] = useState('')
+
+         </UserRegistrationForm>
+
+    difference between setCounter(value) vs setCounter(counter+1)
+    const[counter,setCounter]=useState(0)
+    setInterval(()=>{
+        setCounter(counter+1)
+        setTimeout
+    },1000)
+
+    setCounter(value)
+    setCounter(()=>count+1)
+
+
+pure(parameters dont change return value) vs impure(parameters change return value) functions
+
+
+=============================================================
+
+
+Globally maintain state to share between multiple independent components
+
+Global state between depended components through -useContext
+
+combining both useContext and useReducer - light Redux state management been supported by default in react
+
+
+<Test id ="abc" name= "sample">
+
+    <p>Helloe</p>
+    <b>TestM</b>
+</Test>
+
+props quick review:
+    function Test(props)
+    {
+        props.id
+        props.name
+
+        props.children
+    }
+==============================================================================
+
+    Redux and Redux Tool Kit ->
+        A  3rd party JS library for predictable and maintainable globlal state management
+
+            Redux is a core js library to maintain state within web application
+
+            Redux tool kit -> RTK -> It is a Wrapper on top of redux library to make thing simple while impelementing redux state management in a web application. RTK interally uses Redux code features
+
+        Both Redux and RTX purpose and use is we need to write more code if its redux library whereas in RTX its a wrapper which will mostly take care of basic things by default. SO with lesser code we achieve state management
+
+        In redux we need to define Actions & Reducers as a seperate functionality whereas in RTK we combine both as a slice
+
+        Terminology/Components been used in redux
+            Action
+            Reducers
+            View/UI
+            store
+            Dispatcher
+
+
+    installation of React redux :npm install @reduxjs/toolkit react-redux
+
+    ================================================================================
+
+    configureStore -Method to create a reference to the store
+    createSlice - Method to create a slice
+
+    useSelector -Predefined hook which is supported in redux which is used to access state data in store
+    useDispatch - Through which we can dispatch acions from the components
+
+
+    ==================================================================================
+
+    Singl page web application
+        Within a webapplication journey we will create only one single page(master/main/index)
+        Under that we will be loading multiple components accordingly
+        {
+            productDetails == true &&
+                <ProductDetails>
+        }
+        Using this the history is not saved, but with the routing the history is saved
+
+    React Routing
+    ->
+    react-router-dom(v7) is the standard library for implementing dynamic,client-side routing in React
+
+        Routing enables us to create Single-Page applicationsd(SPA's) where navigation occurs without a full page reload.
+
+    Core components and hooks which are supported in react-router-dom lib:
+
+        <BrowserRouter> Wraps the entire application to enable routing functionality using the browsers History API.
+
+            <BrowserRouter>
+            <App/>
+            </BrowserRouter>
+
+
+        <Routes> a container component that looks through its children <Route>s and renders the first one that matches the current
+
+        <Route> Defines a mapping between a specific URL path and the element(component) that should be rendered whent that path is
+
+            <Route path ="/" element ={<Home/>}/>
+        
+        <Link> Used for navigation between different routes. Its a replacement for the HTML <a> tag that prenvents full page reload
+
+        useNavigate() A hook used for programmatic navigation, such as redirecting a user after a form submission or logic.
+
+        useParams() A hook that allows access to dynamic segments of the URL(e.g., :id in/user/id)
+
+        <Outlet> Used in parent routes to specify where the child routes should be rendered,enabling nested layout
+
+        Modern Features(v6.4 & v7)
+        Recent versions introduced "Data API's" that allow you to manage data fetching and mutations directly within your route
+
+            Loaders:Functions that detch data before a route renders
+            Actions:Functions used for handling data mutations(e.g., POST requests from <Form>).
+            RouterProvider:The recommended way to initialize a router when using these advanced data features
+
+
+        npm install react-router-dom
+------------------------------------------------------------
+
+Routing feature
+    SPA - Single page web 
+
+
+    Concept of loading corresponding component on the page based on the url being changed is called Routing 
+
+    react-route-dom
+
+    On load of this page
+        We will define routing table
+        /tab1 component1 -> <Routes>
+                                <Route path ="/tab1" element ={<Component1/>}/>  loader ="func()"/>    
+                                <Link path ="/tab1">TAB1</Link>useNavigate
+                                <Route path ="/tab2" element ={<Component3/>}/>
+                                <Route path ="/tab3" element {<Component3/>}/>
+                            </Routes>
+        /tab2 component2
+        /tab3 component3
+
+    TAB 1 TAB 2 TAB 3 Tab 4
+        TAB 1 Componenet has to get loaded when tab1 is loaded. THe page is not reloaded. The url is changed
+
+
+For useNavigate() Hook:
+SaveButton
+    ->
+        readDetails
+            checkCondition
+            var navigate = useNavigate();
+                if all good => redirect to successpage - navigate("/successpage)
+                if not good =>redirect to error page
+
+       
+
+        ======
+
+
+        React Fiber:
+        React fiber is the reimplementation of React's code reconcilation algorithm;
+        Design to make render more smoother, more flexible. and capable of handling complex UI updates like animation and gestures
+
+
+        Pure Components:
+        function RenderButton({type}){ //text
+  return(
+    <>
+    
+    <input type={type}/>
+      </>
+  )
+}
+
+everytime whatever paramameters are passed im getting the same UI
+
+
+=================================================
+
+  Higer order components:
+            In react, a Higher order Component(HOC) is an advanced pattern used for reusing component logic. It is not a part of the React Api, per se but rather a pattern that emerges from React coponsitional nature
+
+
+
+        At its core, a HOC is a function that takes a component and returns a new component. Its not actually a component irs a function
+
+        HOC is a "wrapper" that injects extra functionality,data, or styling into an exsisting component without modifing the original component's code
+
+        javascript
+        const EnhancedComponent = higherOrderComponent(WrappedComponent)
+
+        A HOC should be a pure function with no side effects.Should not modify the input
+
+
+
+        Local Memory
+            Cookies
+            storage
+                localStorage-> data will be available even on reloading or reopening of the page
+                sesionStorage-> The data will be stored only on reloading but data will be deleated on reopening of the page
+
+                    setItem(key,value)
+                    getItem(key)
+                console.log(c)->undefined
+                var a = 90
+                var b = 99
+                c = a+b -> 189
+
+----------------------------------------------
+
+useCallback-> Instead of redefineing the handleClick function the useCallback stores a copy of the function so its easier to
+
+var handleClick =()=>{
+    ...
+}
+
+var handleClick = useCallback(()=>{
+    ...
+    ....
+    
+},[dependencies])
+
+usememo->memoization->remembering somehting which will be used for later instead of recalculating/re initializing
+
+memoize -> is going to hold tthe result of the component
+useCallback -> memozie the defintion of the function
+useMemo -> memoize the result of the function -computed value of the function
+'
+var comp = useMemo(()=>{
+    ....
+    ....
+})
+
+lazyloading
+
+==============================================
+
+TypeScript was created by Andres Hejlsberg, a renowed software engineer at MicroSoft, and it was officially released in October 2012.
+
+-Latest stable release in TypeScript 5.9(August 2025)
+
+Type script Features:
+
+-Static Typing: Helps catch errors at complie time instead of run time.
+-Interfaces and Generics: Provides structure and flexibility for complex applications.
+-Modern ECMAScript Support: Includes features from newer versions of Javascript.
+-Tooling Benefits: Autocompletion,refactoring, and debugging are more reliable
+-Predictability: Strong typing makes code more maintianable and easier to understand.
+
+
+installation:
+    
+    npm install -g typescript  ---- npm install -g ts-node
+
+to check the version
+
+    tsc -v6
+
+Type script is not a scripting language
+    -Scripting languages(Javascript,python,Bash) are typically interepted directly and used for automating tasks or writing quick
+
+
+Why TypeScript?
+
+    We are developing webapplication/ pages
+            within Browser
+                html
+                css
+                javascript
+
+        Typescript
+            The values/variables are Typed Data
+
+        in Javascript 
+            -> var a;
+                a= 90;
+                a = 'raj';
+                a= true;
+
+
+        number var UserId;
+
+            UserId = 2345;
+            UserId = 'abcd'
+        var userDetails ={
+            name: '',
+            age:'',
+            location:'',
+            address:''
+        }
+
+        userDetails ={
+            name:'',
+            age:0 -> to be able to know what type this is we use typescript
+        }
+
+        TS ->converting TS code to JS code -> given to browser
+
+        TypeScript is a superset of Javascript code
+
+        JavaScript is a pure scripting language
+        Tyepscript is a scripting language
+
+Object oriented programming concepts:
+
+Object
+Classes
+Inheritance
+Polymorphims
+Encapsulation
+Data abstraction
+
+
+=====================================
+
+
+syntax:
+    var/lat/const variablename : datatype;
+    var userName:string;
+    var isFeepaid:boolean;
+    var userDetails:null;
+
+Datatypes been supported in TypeScript:
+
+    number
+    boolean
+    String
+    null
+    undefined
+    any
+    unknown
+    never
+
+
+    Syntax of function declaration
+
+    <datatype> function functionname(param1:datatype,param2:datatype)
+    {
+        .....
+        ......
+    }
+
+
+
+    Difference between Interface and Types:
+        Interface can be extended through 'extends keyword
+        Type can be extended through "&"
+
+        Interface can be redeclared, it will automatically merges the definition
+
+        Types cannot be redeclared(2 types with same name the properties cannot be merged)
+
+
+
+
+
+
+
+    Development of code is done
+        submit in git
+
+    CICD pipelines ->
+
+    Jenkins
+        build will be triggered
+            code coverage
+            SAST test
+            DAST test
+            PEN test
+        Deployment process - set of tools to delop code to different environments
+            UCD
+            Harness tool
+
+
+
